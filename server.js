@@ -12,7 +12,7 @@ app.use(express.json());
 //     useUnifiedTopology: true
 // }).then(() => console.log('MongoDB Connected'))
 //     .catch(err => console.log(err));
-mongoose.connect(`mongodb+srv://user01:${mongodbPassword}@cluster0.io5zjvu.mongodb.net/`, {
+mongoose.connect(`mongodb+srv://user01:YiKvUmtlxIfSLMOB@cluster0.io5zjvu.mongodb.net`, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).then(() => console.log('MongoDB Connected'))
