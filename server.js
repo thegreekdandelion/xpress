@@ -23,6 +23,10 @@ const userSchema = new mongoose.Schema({
     password: String
 });
 
+app.get('/', (req, res) => {
+    res.send('Hello, Express!')
+})
+
 const User = mongoose.model('User', userSchema);
 
 app.post('/register', async (req, res) => {
