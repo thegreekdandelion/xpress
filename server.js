@@ -2,11 +2,17 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
+const mongodbPassword = 'YiKvUmtlxIfSLMOB'
 
 const app = express();
 app.use(express.json());
 
-mongoose.connect('mongodb://localhost/newapp', {
+// mongoose.connect('mongodb://localhost/newapp', {
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true
+// }).then(() => console.log('MongoDB Connected'))
+//     .catch(err => console.log(err));
+mongoose.connect(`mongodb+srv://user01:${mongodbPassword}@cluster0.io5zjvu.mongodb.net/`, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).then(() => console.log('MongoDB Connected'))
