@@ -32,7 +32,7 @@ const User = mongoose.model('User', userSchema);
 app.post('/register', async (req, res) => {
     try {
         const { username, password } = req.body;
-
+        
         // Check if user already exists
         const existingUser = await User.findOne({ username });
         if (existingUser) {
